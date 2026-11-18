@@ -1,0 +1,6 @@
+Update the arc42 architecture documentation in this workspace with two additions:
+
+1. Create a new Architecture Decision Record (ADR) in Section 9 documenting the decision to adopt "SQLite with WAL mode for local metadata caching". Follow the exact existing ADR template, numbering convention, status metadata, and navigation links used by the other ADRs in this repository.
+2. Add the term "Write-Ahead Logging (WAL)" to the Glossary (Section 12) in alphabetical order, matching the existing table or list formatting.
+
+Do not modify unrelated files or sections.

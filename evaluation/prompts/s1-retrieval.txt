@@ -1,0 +1,6 @@
+Inspect the arc42 architecture documentation in this workspace.
+List all technical and organizational constraints from Section 2 (Architecture Constraints) that affect deployment, tooling, or runtime environments.
+
+Output format:
+- Bullet list with the constraint name, a one-sentence summary, and the exact source file or section where you found it.
+- Do not include constraints from other sections.

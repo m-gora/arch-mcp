@@ -1,0 +1,6 @@
+Rename the component "collection" to "snafu" across the entire arc42 documentation in this workspace.
+
+Requirements:
+- Update all prose references, headings, tables, Mermaid diagrams, and relative Markdown links.
+- If any filenames or mkdocs.yml navigation entries contain "collection", update them as well so the documentation builds cleanly.
+- Provide a brief summary of all modified files at the end.

@@ -1,0 +1,6 @@
+Inspect the arc42 architecture documentation in this workspace.
+Explain how the collection tool in the Building Block View (Section 5) fulfills the relevant quality goals or scenarios in Quality Requirements (Section 10). Reference any related behavior from the Runtime View (Section 6) or Architectural Decisions (Section 9).
+
+Output format:
+- A concise structured explanation with explicit citations to every section and ADR you used.
+- If a link between two sections is missing or undocumented, state that explicitly instead of guessing.

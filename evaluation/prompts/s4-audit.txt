@@ -1,0 +1,11 @@
+Audit the arc42 architecture documentation in this workspace for consistency between:
+- Building Block View (Section 5)
+- Deployment View (Section 7)
+- Glossary (Section 12)
+
+Identify:
+1. Any components mentioned in Section 7 that are missing from Section 5 (or vice versa).
+2. Any domain-specific acronyms or core architectural terms used in Sections 5 or 7 that are missing from the Glossary (Section 12).
+
+Output format:
+- Two clearly labeled lists. For every finding, cite the exact file(s) checked. Do not invent issues if none exist.
