@@ -1,0 +1,30 @@
+{
+  "name": "@arch-mcp/server",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "arch-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@arch-mcp/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "jsdom": "^26.1.0",
+    "mermaid": "^11.17.2",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^22.14.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}

@@ -1,0 +1,78 @@
+site_name: arch-mcp
+site_description: Architecture documentation for the arch-mcp project
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11.4.1/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - Introduction and Goals:
+          - Quality Goals: architecture/01-introduction-and-goals/quality-goals.md
+          - Requirements: architecture/01-introduction-and-goals/requirements.md
+          - Stakeholders: architecture/01-introduction-and-goals/stakeholders.md
+      - Architecture Constraints:
+          - Conventions: architecture/02-architecture-constraints/conventions.md
+          - Organizational Constraints: architecture/02-architecture-constraints/organizational-constraints.md
+          - Technical Constraints: architecture/02-architecture-constraints/technical-constraints.md
+      - System Scope and Context:
+          - Business Context: architecture/03-system-scope-and-context/business-context.md
+          - Technical Context: architecture/03-system-scope-and-context/technical-context.md
+      - Solution Strategy: architecture/04-solution-strategy/strategy.md
+      - Building Block View:
+          - ADR and Concept Workflows: architecture/05-building-block-view/adr-and-concept-workflows.md
+          - arch-mcp System: architecture/05-building-block-view/arch-mcp-system.md
+          - Chapter Document Workflows: architecture/05-building-block-view/chapter-document-workflows.md
+          - Core Document Model: architecture/05-building-block-view/core-document-model.md
+          - MCP Tool Registration: architecture/05-building-block-view/mcp-tool-registration.md
+          - Registry and MCP Server: architecture/05-building-block-view/registry-and-mcp-server.md
+      - Runtime View:
+          - Register and Browse an Architecture: architecture/06-runtime-view/register-and-browse-an-architecture.md
+          - Reject a Stale Document Edit: architecture/06-runtime-view/reject-a-stale-document-edit.md
+          - Supersede an Accepted ADR: architecture/06-runtime-view/supersede-an-accepted-adr.md
+      - Deployment View:
+          - Local Harness Deployment: architecture/07-deployment-view/local-harness-deployment.md
+      - Concepts:
+          - ADR Lifecycle and Superseding: architecture/08-concepts/adr-lifecycle-and-superseding.md
+          - Collection and Chapter Tool Design: architecture/08-concepts/collection-and-chapter-tool-design.md
+          - Frontmatter as Canonical Metadata: architecture/08-concepts/frontmatter-as-canonical-metadata.md
+          - Optimistic Concurrency: architecture/08-concepts/optimistic-concurrency-for-document-edits.md
+      - Architecture Decisions:
+          - ADR-0001: architecture/09-architecture-decisions/adr-0001-use-typescript-and-the-official-mcp-sdk-for-the-architecture-server.md
+          - ADR-0002: architecture/09-architecture-decisions/adr-0002-register-local-architecture-directories-without-git-synchronization-in-v1.md
+          - ADR-0003: architecture/09-architecture-decisions/adr-0003-expose-chapter-specific-mcp-tools-instead-of-generic-document-crud.md
+          - ADR-0004: architecture/09-architecture-decisions/adr-0004-keep-frontmatter-authoritative-and-render-reader-facing-metadata-into-markdown-bodies.md
+          - ADR-0005: architecture/09-architecture-decisions/adr-0005-use-a-structured-nygard-and-itd-adr-template-and-freeze-accepted-decision-content.md
+          - ADR-0006: architecture/09-architecture-decisions/adr-0006-defer-deletion-move-and-legacy-migration-workflows-from-the-mcp-server-v1.md
+          - ADR-0007: architecture/09-architecture-decisions/adr-0007-group-collection-operations-and-fixed-chapter-operations-into-a-compact-mcp-tool-surface.md
+          - ADR-0008: architecture/09-architecture-decisions/adr-0008-use-github-actions-release-please-and-mkdocs-for-project-automation.md
+      - Quality Requirements:
+          - Correctness: architecture/10-quality-requirements/correctness.md
+          - Interoperability: architecture/10-quality-requirements/interoperability.md
+          - Reliability: architecture/10-quality-requirements/reliability.md
+          - Usability: architecture/10-quality-requirements/usability.md
+      - Risks and Technical Debt:
+          - Concurrent File Writes: architecture/11-risks-and-technical-debt/concurrent-server-processes-can-race-on-the-same-architecture-files.md
+          - Collection Validation: architecture/11-risks-and-technical-debt/loose-collection-envelopes-depend-on-thorough-tool-side-validation.md
+          - MkDocs Rendering: architecture/11-risks-and-technical-debt/static-site-generator-conventions-have-not-been-selected.md
+      - Glossary: architecture/12-glossary/index.md
